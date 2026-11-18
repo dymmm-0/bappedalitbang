@@ -68,11 +68,3 @@ npm run tailwind          # build CSS sekali
 npm run tailwind:watch    # rebuild saat file CSS berubah
 vendor/bin/phpunit        # jalankan test
 ```
-
-## Akun default (hasil seeder — **ganti sebelum produksi**)
-
-| Email | Role | Password |
-|---|---|---|
-| `admin.kepala@admin.com` | Kepala Badan (akses penuh) | `admin123` |
-| `admin.umum@admin.com` | Kepala Sub Bagian Umum | `admin123` |
-| `admin.{ikw,ppepd,ppm,litbang,psda}@admin.com` | Admin bidang | `admin123` |

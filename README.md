@@ -59,7 +59,7 @@ npm install && npm run tailwind
 php artisan serve
 ```
 
-Panduan lengkap (vhost Laragon, Apache/PHP, akun admin, troubleshooting): **`PANDUAN_INSTALASI.md`**.
+Panduan lengkap (vhost Laragon, Apache/PHP, akun admin, troubleshooting) ada di **[PANDUAN_INSTALASI.md](PANDUAN_INSTALASI.md)**.
 
 ## Perintah harian
 

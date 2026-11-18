@@ -1,0 +1,37 @@
+# =====================================================
+# Keamanan direktori upload
+# Blokir eksekusi script / akses file tersembunyi.
+# Berlaku utk Apache. Untuk Laragon nginx, set deny serupa
+# di vhost (lihat AGENTS.md: split stack nginx :8080).
+# =====================================================
+
+# Matikan PHP engine untuk direktori ini (jika mod_php aktif)
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+
+# Blokir eksekusi script yang berbahaya (Apache 2.4)
+<IfModule mod_authz_core.c>
+    <FilesMatch "\.(ph(p[0-9]?|t|tml|ar)?|phtml|cgi|pl|py|sh|asp|aspx|jsp|htaccess|cert|key|bat|cmd|exe)$">
+        Require all denied
+    </FilesMatch>
+
+    # Sembunyikan file dot (mis. .git, .env, file hidden)
+    <FilesMatch "^\.">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+# Blokir akses langung ke file dot (Apache 2.2)
+<IfModule !mod_authz_core.c>
+    <FilesMatch "^\.">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>
+
+# Tanpa index listing
+Options -Indexes

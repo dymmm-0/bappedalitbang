@@ -1,0 +1,41 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
+
+# DB dumps berisi data asli (email + hash password user)
+/backup
+/backups
+
+# artefak tool
+graphify-out/
+graphify-out-*/
+/.playwright-mcp
+/.opencode
+/.kiro
+
+# media besar
+/public/uploads/**/*.mkv
+/public/uploads/**/*.mp4
+
+# dokumen internal (catatan kerja, draf bab, panduan presentasi)
+/AGENTS.md
+/CLAUDE.md
+/LAPORAN_KP.md
+/BAB4_kerangka.md
+/BAB5_kerangka.md
+/blackbox.md
+/kesimpulan.md
+/keunggulan_sistem.md
+/pencapaian_tujuan_khusus.md
+/saran.md
+/PANDUAN_PRESENTASI.md
+/graphify-scope.ps1

@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npm run tailwind",
+    "production": "npm run tailwind",
+    "watch": "run-p tailwind:watch mix:watch",
+    "tailwind": "npx tailwindcss -i resources/assets/css/app.css -o public/css/app.css --minify",
+    "tailwind:watch": "npx tailwindcss -i resources/assets/css/app.css -o public/css/app.css --watch",
+    "mix:watch": "mix watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.20",
+    "autoprefixer": "^10.5.4",
+    "axios": "^1.6",
+    "bootstrap-sass": "^3.4.3",
+    "cross-env": "^7.0",
+    "jquery": "^3.7",
+    "laravel-mix": "^6.0",
+    "lodash": "^4.17",
+    "postcss": "^8.5.25",
+    "sass": "^1.69",
+    "sass-loader": "^13.3",
+    "tailwindcss": "^3.4.19",
+    "vue": "^2.7"
+  }
+}
